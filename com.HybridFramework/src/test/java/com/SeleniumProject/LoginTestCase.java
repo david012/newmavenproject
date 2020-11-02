@@ -16,7 +16,6 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import junit.framework.Assert;
 
 
 public class LoginTestCase   {
@@ -53,6 +52,7 @@ public void launchBrowser() {
        
 	String title = driver.getTitle();
 	logger.log(LogStatus.INFO, "verify title");
+	System.out.println("verify title"+title);
 	
     loginpage=PageFactory.initElements(driver, LoginObjects.class);
     loginpage.getusername(config.getusername(), config.getpassword());
